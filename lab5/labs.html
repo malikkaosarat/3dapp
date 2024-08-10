@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kTc9w8SdYtv5PpGkA1VVz9OYXla8z0ts5RJ7kw6i3QjNNY9Cfp5WuPVx5pumMM9R1mPZwKXu0vCbg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- X3dom -->
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+    <style>
+        .dropdown-menu .dropdown-menu {
+            position: absolute;
+            left: 100%; /* Position it to the right of the parent dropdown */
+            margin-top: -40px; /* Align with the parent dropdown */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .image-item {
+            flex: 1 1 calc(33.333% - 10px); /* 3 images per row, with some space between */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            height: auto;
+        }
+        .image-title {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar sticky-top">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html">
+                <h1>1</h1>
+                <h1>Coca</h1>
+                <h2>Cola</h2>
+                <h3>Journey</h3>
+                <p>Refreshing the world, one story at a time</p>
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Kaosarat Malik Web 3D Applications" data-content="My name is Kaosarat Malik, Advanced Computer Science(Msc), i designed this Mobile 3d applications, it is based on a 3d websites.">About</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Models</a>
+                    <div class="dropdown-content">
+                        <a href="coke.html">Cocacola</a>
+                        <a href="sprite.html">Sprite</a>
+                        <a href="dr-pepper.html">Dr.Pepper</a>
+                    </div>
+                </li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+  
+    <div class="container">
+        <div class="image-item">
+            <img src="images/lab1.png" alt="Lab 1">
+            <div class="image-title">Lab1 1</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab2.png" alt="lab2 2">
+            <div class="image-title">Lab 2</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab3.png" alt="Lab 3">
+            <div class="image-title">Lab 3</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab4.png" alt="Lab 4">
+            <div class="image-title">Lab 4</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab5.png" alt="Lab 5">
+            <div class="image-title">Lab 5</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab 6.png" alt="Lab 6">
+            <div class="image-title">Lab 6</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab 7.PNG" alt="Lab 7">
+            <div class="image-title">Lab 7</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab 8.png" alt="Lab 8">
+            <div class="image-title">Lab 8</div>
+        </div>
+        <div class="image-item">
+            <img src="images/lab 9.png" alt="Lab 9">
+            <div class="image-title">Lab 9</div>
+        </div>
+    </div>
+  <footer>
+      <div class="footer-content">
+          <ul class="social-icons">
+              <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+          <p>&copy; <span id="year"></span> Mobile 3D Applications.</p>
+      </div>
+  </footer>
+
+  <div class="modal fade" id="contactModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">3D App Contact Details</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Kaosarat Ololade Malik, Informatics & Engineering, Email: km744@sussex.ac.uk</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+        
+        </div>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/popper.min.js"></script>
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/bootstrap-4.4.1.js"></script>
+
+<!-- Include the x3dom JavaScript -->
+<script src='js/x3dom.js'></script>
+<script src="js/slideshow.js"></script>
+
+<script>
+    function toggleNav() {
+        var nav = document.getElementById("main-nav");
+        nav.classList.toggle("show-nav");
+    }
+
+    // JavaScript to toggle dropdown on click
+    document.querySelector('.dropbtn').addEventListener('click', function() {
+        this.nextElementSibling.classList.toggle('show');
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
