@@ -12,7 +12,10 @@
     <link rel='stylesheet' type='text/css' href='../application/css/x3dom.css'>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../application/css/custom.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../application/css/custom-d.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../application/css/header.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../application/css/footer.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../application/css/style.css" crossorigin="anonymous">
 
       <!-- Lets have some fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -23,46 +26,37 @@
     <title>Lab 9 MVC Web 3D Applications</title>
 
   </head>
-  <body id="bodyColor">
+  <body>
       <!-- The 3D App header -->
-      <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
-      
-            <!-- Brand -->
+      <header>
+        <nav class="navbar sticky-top">
             <div class="logo">
-              <a class="navbar-brand" href="#">
-                <h1>1oca</h1>
+                <a class="navbar-brand" href="#">
+                <h1>Coca</h1>
                 <h2>Cola</h2>
                 <h3>Journey</h3>
                 <p>Refreshing the world, one story at a time</p>
-              </a>
+                </a>
             </div>
-
-            <!-- Navbar Menu Icon -->
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- link Menu Icon button to the links class navbar-collapse selector] -->
-            <div class="collapse navbar-collapse">
-                <!-- Links -->
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a id="navHome" class="nav-link active" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a id="navAbout" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module ...">About</a>
-                  </li>
-              
-                  <!-- Dropdown -->
-                  <li class="nav-item">
-                      <a id="navModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
-                  </li>
-                </ul>
+            <div class="hamburger" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
             </div>
-      </nav>
+            <ul class="nav-links" id="main-nav">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Kaosarat Malik Web 3D Applications" data-content="My name is Kaosarat Malik, Advanced Computer Science(Msc), i designed this Mobile 3d applications, it is based on a 3d websites.">About</a>
+                </li>
+                <li>
+                  <a id="navModels"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                </li>
+                
+            </ul>
+        </nav>
+      
+      </header>
 
       <!-- This is the main contents of the page, it has a background image across 1 column, followed by three columns holding cards in a row for the 3 images and associated texts
       -->
@@ -165,7 +159,7 @@
                             <scene>
                                 <Switch whichChoice="0" id='SceneSwitch'>
                                     <transform>
-                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="../application/assets/x3d/coke.x3d" > </inline>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="../application/assets/x3d/coke_can.x3d" > </inline>
                                     </transform>
                                     <transform>
                                         <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="../application/assets/x3d/sprite.x3d"> </inline>
@@ -349,19 +343,17 @@
 
       </div> <!-- End 3D App SPA Contents -->
       
-      <nav id="footerColor" class="navbar navbar-expand-sm footer">
-          <div class="container-fluid">   
-              <div class="navbar-text float-left copyright">
-              <p><span class="align-baseline"></span>&copy <span id="year"></span> Mobile Web 3D Applications </span></p>
-              </div>
-              <div class="navbar-text float-right social">
-                  <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-                  <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                  <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
-                  <a href="#"><i class="fab fa-github-square fa-2x"></i></a>
-              </div>
-          </div>
-      </nav> 
+      <footer>
+        <div class="footer-content">
+            <ul class="social-icons">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <p>&copy; <span id="year"></span> Mobile 3D Applications.</p>
+        </div>
+    </footer>
 
       <!-- My 3D App modals -->
       <!-- Contact modal -->

@@ -186,6 +186,38 @@ header nav ul li:hover .dropdown-content {
     color: #c00;
 }
 
+#main_3d_image {
+    background-image: url(../assets/images/coke_banner.jpg);
+    background-repeat: no-repeat;
+    height: 201px;
+}
+
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: rgba(255,255,255,0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+#main_text h2 {
+    color: rgba(0,102,153,1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+} 
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     header {
@@ -345,8 +377,34 @@ header nav ul li:hover .dropdown-content {
     height: 100%;
 }
 
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: rgba(255,255,255,0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+#main_text h2 {
+    color: rgba(0,102,153,1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+} 
+
 /* Animation for the X3D model */
-@keyframes rotateModel {
+/* @keyframes rotateModel {
     from {
         transform: rotateY(0deg);
     }
@@ -357,7 +415,7 @@ header nav ul li:hover .dropdown-content {
 
 .model3D x3d {
     animation: rotateModel 20s infinite linear;
-}
+} */
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -388,54 +446,54 @@ header nav ul li:hover .dropdown-content {
         flex: 1;
     }
 
-.hero {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-}
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
 
-.hero .content {
-    max-width: 100%;
-}
+    .hero .content {
+        max-width: 100%;
+    }
 
-.hero .content h1 {
-    font-size: 32px;
-}
+    .hero .content h1 {
+        font-size: 32px;
+    }
 
-.hero .content p {
-    font-size: 16px;
-}
+    .hero .content p {
+        font-size: 16px;
+    }
 
-.hero .image {
-    margin-top: 20px;
-}
+    .hero .image {
+        margin-top: 20px;
+    }
 
-.hero .image img {
-    max-width: 80%;
-}
+    .hero .image img {
+        max-width: 80%;
+    }
 
-.logo h1 {
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: -10px;
-}
+    .logo h1 {
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: -10px;
+    }
 
-.logo h2 {
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: -10px;
-}
+    .logo h2 {
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: -10px;
+    }
 
-.logo h3 {
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: -5px;
-}
+    .logo h3 {
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: -5px;
+    }
 
-.logo p {
-    font-size: 12px;
-    margin-top: 30px;
-}
+    .logo p {
+        font-size: 12px;
+        margin-top: 30px;
+    }
 }
 
 @media (min-width: 769px) {
