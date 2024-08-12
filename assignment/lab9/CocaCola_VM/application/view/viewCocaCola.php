@@ -55,7 +55,7 @@
 
 
 
-  <section class="hero" id="home">
+  <!-- <section class="hero" id="home">
       <div class="content">
           <h1><span class="black-text">Always</span> Best Served Chilled</h1>
           <p>Coca-Cola is the world's favourite soft drink and has been enjoyed since 1886. Whether you want a small 250ml
@@ -67,7 +67,7 @@
           <img src="../application/assets/images/coca_cola.png" alt="Coca-Cola">
       </div>
   </section>
-  <br>
+  <br> -->
   <div class="row" style="margin-left: 10px; margin-right: 10px; " id="about">
         <!-- Coca Cola Column -->
         <div class="col-sm-4">
