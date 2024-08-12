@@ -1,98 +1,149 @@
-//adapted from example code 'benskitchen.com'
+let nview = "RotationTimer";
 
-function cokeScene(){
-    nSwitch = 0;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
+function cokeScene() {
+    nview = 'RotationTimer';
+    document.getElementById('SceneSwitch').setAttribute('whichChoice', 0);
 }
 
-function spriteScene(){
-    nSwitch = 1;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
+function spriteScene() {
+    nview = 'SpriteRotationTimer';
+    document.getElementById('SceneSwitch').setAttribute('whichChoice', 1);
 }
 
-function pepperScene(){
-    nSwitch = 2;
-    document.getElementById('SceneSwitch').setAttribute('whichChoice', nSwitch);
+function pepperScene() {
+    nview = 'PepperRotationTimer';
+    document.getElementById('SceneSwitch').setAttribute('whichChoice', 2);
 }
 
-var spinning = false;
+//var spinning = false;
 
-function spin()
-{
+function spin_bk() {
 	spinning = !spinning;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__'+nview+axis).setAttribute('enabled', spinning.toString());
 }
 
-function stopRotation()
-{
+
+let spinningX = false;
+let spinningY = false;
+let spinningZ = false;
+
+function spin(axis="x") {
+
+	stopRotation()
+
+let timerId;
+let spinning;
+
+switch(axis) {
+	case 'x':
+	timerId = 'model__'+nview+'X';
+	spinning = spinningX = !spinningX;
+	break;
+	case 'y':
+	timerId = 'model__'+nview+'Y';
+	spinning = spinningY = !spinningY;
+	break;
+	case 'z':
+	timerId = 'model__'+nview+'Z';
+	spinning = spinningZ = !spinningZ;
+	break;
+	default:
+	console.error('Invalid axis');
+	return;
+}
+
+console.log(timerId)
+
+document.getElementById(timerId).setAttribute('enabled', spinning.toString());
+}
+
+
+function stopRotation_bk() {
 	spinning = false;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__'+nview).setAttribute('enabled', spinning.toString());
 }
 
-function animateModel()
-{
-    if(document.getElementById('model__RotationTimer').getAttribute('enabled')!= 'true')
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'true');
-    else
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'false');
+function stopRotation() {
+
+spinningX = false;
+spinningY = false;
+spinningZ = false;
+
+document.getElementById('model__'+nview+'X').setAttribute('enabled', 'false');
+document.getElementById('model__'+nview+'Y').setAttribute('enabled', 'false');
+document.getElementById('model__'+nview+'Z').setAttribute('enabled', 'false');
+
 }
 
-function wireFrame()
-{
+function animateModel(axis = "Y") {
+
+	const timer = document.getElementById('model__'+nview+axis);
+
+	const isEnabled = timer.getAttribute('enabled') === 'true';
+
+	timer.setAttribute('enabled', !isEnabled);
+}
+
+function wireFrame() {
 	var e = document.getElementById('wire');
+	if (e) {
 	e.runtime.togglePoints(true);
 	e.runtime.togglePoints(true);
+	}
 }
 
 var lightOn = true;
 
-function headLight()
-{
+function headLight() {
 	lightOn = !lightOn;
-	document.getElementById('model__headlight').setAttribute('headlight', lightOn.toString());
+	document.getElementById('headlight').setAttribute('headlight', lightOn.toString());
 	console.log(lightOn);
 }
 
-function omniLight()
-{
+function omniLight() {
 	lightOn = !lightOn;
-	document.getElementById('model__omniLight').setAttribute('headlight', lightOn.toString());
+	document.querySelectorAll('PointLight').forEach(light => {
+	light.setAttribute('headlight', lightOn.toString());
+	});
 	console.log(lightOn);
 }
 
-function targetLight()
-{
+function targetLight() {
 	lightOn = !lightOn;
 	document.getElementById('model__targetLight').setAttribute('headlight', lightOn.toString());
 	console.log(lightOn);
 }
 
-function cameraFront()
-{
-	document.getElementById('model__CameraFront').setAttribute('bind', 'true');
+// function cameraFront() {
+// 	document.getElementById('model__CameraFront').setAttribute('bind', 'true');
+// }
+
+function cameraFront() {
+    const camera = document.getElementById('model__CameraFront');
+    if (camera) {
+        // Code to position the camera at the front view
+		console.log('works')
+    } else {
+        console.error('Element with ID "model__CameraFront" not found');
+    }
 }
 
-function cameraBack()
-{
+function cameraBack() {
 	document.getElementById('model__CameraBack').setAttribute('bind', 'true');
 }
 
-function cameraLeft()
-{
+function cameraLeft() {
 	document.getElementById('model__CameraLeft').setAttribute('bind', 'true');
 }
 
-function cameraRight()
-{
+function cameraRight() {
 	document.getElementById('model__CameraRight').setAttribute('bind', 'true');
 }
 
-function cameraTop()
-{
+function cameraTop() {
 	document.getElementById('model__CameraTop').setAttribute('bind', 'true');
 }
 
-function cameraBottom()
-{
+function cameraBottom() {
 	document.getElementById('model__CameraBottom').setAttribute('bind', 'true');
 }

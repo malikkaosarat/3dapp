@@ -184,26 +184,12 @@
         <div class="col-sm-4">
             <div class="card text-left">
                 <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                    <!-- Dropdown nav-tab -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Cameras</a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#" onclick="cameraFront();">Front</a>
-                            <a class="dropdown-item" href="#" onclick="cameraBack();">Back</a>
-                            <a class="dropdown-item" href="#" onclick="cameraLeft();">Left</a>
-                            <a class="dropdown-item" href="#" onclick="cameraRight();">Right</a>
-                            <a class="dropdown-item" href="#" onclick="cameraTop();">Top</a>
-                            <a class="dropdown-item" href="#" onclick="cameraBottom();">Bottom</a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 <div class="card-body">
                     <div class="card-Title x3dCamera_Subtitle drinksText">
                         <h3>Camera Views</h3>
                     </div>                            
-                    <a href="#" class="btn btn-success btn-responsive" onclick="cameraFront();">Default</a>
+                    <a href="#" id="model__CameraFront" class="btn btn-success btn-responsive" onclick="cameraFront();">Front Camera</a>
                     <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBack();">Back</a>
                     <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLeft();">Left</a>
                     <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraRight();">Right</a>
@@ -228,9 +214,9 @@
                     <div class="card-Title x3dAnimationSubtitle drinksText">
                         <h3>Animation Options</h3>
                     </div>
-                    <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">RotX</a>
-                    <a href="#" class="btn btn-outline-light btn-responsive">RotY</a>
-                    <a href="#" class="btn btn-outline-light btn-responsive">RotZ</a>
+                    <a href="#" class="btn btn-primary btn-responsive" onclick="spin('x');">RotX</a>
+                    <a href="#" class="btn btn-success btn-responsive" onclick="spin('y');">RotY</a>
+                    <a href="#" class="btn btn-info btn-responsive" onclick="spin('z');">RotZ</a>
                     <a href="#" class="btn btn-outline-dark btn-responsive" onclick="stopRotation();">Stop</a>
                     <div class="card-text x3dAnimationDescription drinksText">
                         <p>These buttons select a range of X3D animation options</p>
@@ -241,37 +227,15 @@
 
         <div class="col-sm-4">
             <div class="card text-left">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >Render</a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Polygon</a>
-                            <a class="dropdown-item" href="#" onclick="wireFrame();">Wireframe</a>
-                            <a class="dropdown-item" href="#">Vertex</a>
-                            </div>
-                        </li>
-                        <!-- Dropdown nav-tab -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Lights</a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#" onclick="headLight();">Default</a>
-                            <a class="dropdown-item" href="#" onclick="omniLight();">Onmi On/Off</a>
-                            <a class="dropdown-item" href="#" onclick="targetLight();">Target On/Off</a>
-                            <a class="dropdown-item" href="#" onclick="headLight();">Headlight On/Off</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
                 <div class="card-body">
                     <div class="card-Title x3dRendersubtitle drinksText">
                         <h3>Render and Lighting Options</h3>
                     </div>
-                    <a href="#" class="btn btn-success btn-responsive">Poly</a>
+                    <a href="#" class="btn btn-success btn-responsive" onclick="wireFrame();">Poly</a>
                     <a href="#" class="btn btn-secondary btn-responsive" onclick="wireFrame();">Wire</a>
                     <a href="#" class="btn btn-success btn-responsive" onclick="headLight();">Headlight</a>
-                    <a href="#" class="btn btn-outline-dark btn-responsive">Default</a>
+                    <a href="#" class="btn btn-outline-dark btn-responsive" onclick="wireFrame();">Default</a>
                     <div class="card-text x3dRenderDescription drinksText">
                         <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
                     </div>
