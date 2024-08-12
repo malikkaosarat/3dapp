@@ -9,7 +9,7 @@ $(document).ready(function() {
 function selectPage() {
 
 	$('#home').show();
-	$('#about').hide();
+	// $('#about').hide();
 	$('#models').hide();
 	$('#interaction').hide();
 	$('#cokeDescription').hide();

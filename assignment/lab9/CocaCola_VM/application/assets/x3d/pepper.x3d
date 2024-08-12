@@ -22,7 +22,7 @@
         <Shape>
           <Appearance>
             <Material diffuseColor="0.597415 0.342463 0.118336" specularColor="0.149354 0.085616 0.029584" shininess="1" transparency="0"/>
-            <ImageTexture url="maps/drPepperTexture-d.jpg"/>
+            <ImageTexture url="maps/Dr.p_label.jpg"/>
           </Appearance>
           <IndexedFaceSet solid="false" normalPerVertex="true" coordIndex="
             2 1 0 -1 
